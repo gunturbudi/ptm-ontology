@@ -1,0 +1,193 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dflow: <http://example.com/ontology/dflow#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix ur: <http://www.example.org/ur#> .
+@prefix tmc: <http://www.example.org/tmc#> .
+@prefix msc: <http://www.example.org/msc#> .
+
+### Classes ###
+
+dpv:DataSubject
+    rdf:type rdfs:Class ;
+    rdfs:comment "Represents the individual a piece of data is about." .
+
+dpv:PersonalData
+    rdf:type rdfs:Class ;
+    rdfs:comment "Any information relating to an identified or identifiable natural person (data subject)." .
+
+dpv:Processing
+    rdf:type rdfs:Class ;
+    rdfs:comment "Any operation or set of operations which is performed on personal data or on sets of personal data." .
+
+ur:UserRequirements
+    rdf:type rdfs:Class ;
+    rdfs:comment "Represent the needs or conditions to meet for a user." .
+
+ur:UserStory
+    rdf:type rdfs:Class ;
+    rdfs:comment "A user story is a tool used in Agile software development to capture a description of a software feature from an end-user perspective." ;
+    rdfs:subClassOf ur:UserRequirements .
+
+dflow:Processing rdf:type owl:Class ;
+                rdfs:label "Processing" ;
+                rdfs:comment "Represents a component or activity within the system that transforms or manipulates data." .
+
+dflow:DataStore rdf:type owl:Class ;
+                rdfs:label "Data Store" ;
+                rdfs:comment "Represents a repository or storage location where data is persistently stored." .
+
+dflow:ExternalEntity rdf:type owl:Class ;
+                     rdfs:label "External Entity" ;
+                     rdfs:comment "Represents an external system, user, or entity that interacts with the system being modeled." .
+
+dflow:DataFlow rdf:type owl:Class ;
+               rdfs:label "Data Flow" ;
+               rdfs:comment "Represents the movement of data between processing components, data stores, and external entities in a DFD." .
+
+tmc:ThreatCategories
+    rdf:type rdfs:Class ;
+    rdfs:comment "A classification of threats based on a broad set of categories. LINDDUN categories may include Linkability, Identifiability, Non-repudiation, Detectability, Disclosure of information, Unawareness, and Non-compliance. Each category is defined by the unique characteristics of the threats it includes." ;
+    rdfs:property [ 
+        rdf:type rdf:Property ;
+        rdfs:label "Information" ;
+        rdfs:comment "Additional information regarding the threat category." 
+    ] .
+
+tmc:ThreatTrees
+    rdf:type rdfs:Class ;
+    rdfs:subClassOf tmc:ThreatCategories;
+    rdfs:comment "Graphical representations of threats or attacks on a system, organized hierarchically. They break down higher-level threats into smaller, more specific threats. Each ThreatTree belongs to one of the categories defined in ThreatCategories." ;
+    rdfs:property [ 
+        rdf:type rdf:Property ;
+        rdfs:label "Examples" ;
+        rdfs:comment "Specific instances where this type of threat has been realized in a system." 
+    ] ;
+    rdfs:property [ 
+        rdf:type rdf:Property ;
+        rdfs:label "Criteria" ;
+        rdfs:comment "The characteristics or conditions that define this specific type of threat." 
+    ] ;
+    rdfs:property [ 
+        rdf:type rdf:Property ;
+        rdfs:label "Impact" ;
+        rdfs:comment "The potential consequences or damage that could occur if this type of threat is realized." 
+    ] ;
+    rdfs:property [ 
+        rdf:type rdf:Property ;
+        rdfs:label "Additional Info" ;
+        rdfs:comment "Other relevant details or context about this type of threat that are not captured in the other fields." 
+    ] .
+
+tmc:PrivacyRequirements
+    rdf:type rdfs:Class ;
+    rdfs:comment "Privacy requirements are the specifications and guidelines that are put in place to protect a system from the identified threats. They are the result of threat analysis and often serve as the basis for security and privacy measures in system design and operation." ;
+    rdfs:property [ 
+        rdf:type rdf:Property ;
+        rdfs:label "RelatedThreatCategory" ;
+        rdfs:comment "The threat category that the privacy requirement addresses." ;
+        rdfs:range tmc:ThreatCategories
+    ] ;
+    rdfs:property [ 
+        rdf:type rdf:Property ;
+        rdfs:label "RelatedThreatTree" ;
+        rdfs:comment "The specific threat tree that the privacy requirement addresses, if applicable." ;
+        rdfs:range tmc:ThreatTrees
+    ] .
+
+
+dpv:TechnicalMeasure a rdfs:Class ;
+    rdfs:label "Technical Measure"@en ;
+    rdfs:isDefinedBy "DPVCG"^^xsd:string ;
+    rdfs:subClassOf dpv:TechnicalOrganisationalMeasure .
+
+
+msc:PrivacyDesignPattern a rdfs:Class ;
+    rdfs:label "Privacy Design Pattern"@en ;
+    rdfs:isDefinedBy "DPVCG"^^xsd:string ;
+    rdfs:subClassOf dpv:TechnicalMeasure .
+
+### Object Properties ###
+
+dflow:source rdf:type owl:ObjectProperty ;
+             rdfs:label "source" ;
+             rdfs:comment "Specifies the source component or entity from which the data flow originates." ;
+             rdfs:domain dflow:DataFlow ;
+             rdfs:range [ rdf:type owl:Class ;
+                          owl:unionOf (dflow:Processing dflow:DataStore dflow:ExternalEntity)
+                        ] .
+
+dflow:destination rdf:type owl:ObjectProperty ;
+                  rdfs:label "destination" ;
+                  rdfs:comment "Specifies the destination component or entity to which the data flow is directed." ;
+                  rdfs:domain dflow:DataFlow ;
+                  rdfs:range [ rdf:type owl:Class ;
+                               owl:unionOf (dflow:Processing dflow:DataStore dflow:ExternalEntity)
+                             ] .
+
+
+
+# Property Definitions
+
+ur:involvesDataSubject
+    rdf:type rdf:Property ;
+    rdfs:comment "Indicates that a user requirement or story involves a data subject." ;
+    rdfs:domain ur:UserRequirements ;
+    rdfs:range dpv:DataSubject .
+
+ur:involvesPersonalData
+    rdf:type rdf:Property ;
+    rdfs:comment "Indicates that a user requirement or story involves personal data." ;
+    rdfs:domain ur:UserRequirements ;
+    rdfs:range dpv:PersonalData .
+
+ur:involvesProcessing
+    rdf:type rdf:Property ;
+    rdfs:comment "Indicates that a user requirement or story involves processing of data." ;
+    rdfs:domain ur:UserRequirements ;
+    rdfs:range dpv:Processing .
+
+
+tmc:hasCategory
+    rdf:type rdf:Property ;
+    rdfs:comment "Indicates that a specific threat falls under a certain threat category." ;
+    rdfs:domain tmc:ThreatTrees ;
+    rdfs:range tmc:ThreatCategories .
+
+tmc:hasParentThreat
+    rdf:type rdf:Property ;
+    rdfs:comment "Indicates a parent-child relationship between two threats in a threat tree, where a larger threat can be broken down into smaller threats." ;
+    rdfs:domain tmc:ThreatTrees ;
+    rdfs:range tmc:ThreatTrees .
+
+dflow:containsPotentialThreat
+    rdf:type rdf:Property ;
+    rdfs:comment "Indicates that a specific data flow contains potential threats, as represented in the threat tree." ;
+    rdfs:domain dflow:DataFlow ;
+    rdfs:range tmc:ThreatTrees .
+
+tmc:isMitigatedBy
+    rdf:type rdf:Property ;
+    rdfs:comment "Indicates that a specific threat can be mitigated by a particular strategy, be it a privacy design pattern or a privacy-enhancing technology." ;
+    rdfs:domain tmc:ThreatTrees ;
+    rdfs:range msc:PrivacyDesignPattern .
+
+ur:mapsToExternalEntity
+    rdf:type rdf:Property ;
+    rdfs:comment "Indicates that a data subject in user requirements maps to an external entity in a data flow diagram." ;
+    rdfs:domain dpv:DataSubject ;
+    rdfs:range dflow:ExternalEntity .
+
+ur:mapsToProcessing
+    rdf:type rdf:Property ;
+    rdfs:comment "Indicates that processing in user requirements maps to processing in a data flow diagram." ;
+    rdfs:domain dpv:Processing ;
+    rdfs:range dflow:Processing .
+
+ur:mapsToDataStore
+    rdf:type rdf:Property ;
+    rdfs:comment "Indicates that personal data in user requirements maps to a data store in a data flow diagram." ;
+    rdfs:domain dpv:PersonalData ;
+    rdfs:range dflow:DataStore .

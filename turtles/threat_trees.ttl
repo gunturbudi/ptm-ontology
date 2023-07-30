@@ -1,0 +1,1349 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tmc: <http://www.example.org/tmc#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.example.org/tmc#Additional_Info
+tmc:Additional_Info rdf:type owl:AnnotationProperty .
+
+
+###  http://www.example.org/tmc#Code
+tmc:Code rdf:type owl:AnnotationProperty .
+
+
+###  http://www.example.org/tmc#Criteria
+tmc:Criteria rdf:type owl:AnnotationProperty .
+
+
+###  http://www.example.org/tmc#Examples
+tmc:Examples rdf:type owl:AnnotationProperty .
+
+
+###  http://www.example.org/tmc#Impact
+tmc:Impact rdf:type owl:AnnotationProperty .
+
+
+###  http://www.example.org/tmc#hasChildren
+tmc:hasChildren rdf:type owl:AnnotationProperty .
+
+
+###  http://www.example.org/tmc#id
+tmc:id rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.org/tmc#D
+tmc:D rdf:type owl:Class ;
+      tmc:hasChildren tmc:D.1 ,
+                      tmc:D.2 ,
+                      tmc:D.3 .
+
+
+###  http://www.example.org/tmc#D.1
+tmc:D.1 rdf:type owl:Class ;
+        rdfs:subClassOf tmc:D .
+
+
+###  http://www.example.org/tmc#D.2
+tmc:D.2 rdf:type owl:Class ;
+        rdfs:subClassOf tmc:D .
+
+
+###  http://www.example.org/tmc#D.3
+tmc:D.3 rdf:type owl:Class ;
+        rdfs:subClassOf tmc:D .
+
+
+###  http://www.example.org/tmc#DD
+tmc:DD rdf:type owl:Class ;
+       tmc:hasChildren tmc:DD.1 ,
+                       tmc:DD.2 ,
+                       tmc:DD.3 ,
+                       tmc:DD.4 .
+
+
+###  http://www.example.org/tmc#DD.1
+tmc:DD.1 rdf:type owl:Class ;
+         rdfs:subClassOf tmc:DD .
+
+
+###  http://www.example.org/tmc#DD.1.1
+tmc:DD.1.1 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:DD.1 .
+
+
+###  http://www.example.org/tmc#DD.1.2
+tmc:DD.1.2 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:DD.1 .
+
+
+###  http://www.example.org/tmc#DD.1.3
+tmc:DD.1.3 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:DD.1 .
+
+
+###  http://www.example.org/tmc#DD.2
+tmc:DD.2 rdf:type owl:Class ;
+         rdfs:subClassOf tmc:DD .
+
+
+###  http://www.example.org/tmc#DD.2.1
+tmc:DD.2.1 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:DD.2 .
+
+
+###  http://www.example.org/tmc#DD.2.2
+tmc:DD.2.2 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:DD.2 .
+
+
+###  http://www.example.org/tmc#DD.2.3
+tmc:DD.2.3 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:DD.2 .
+
+
+###  http://www.example.org/tmc#DD.3
+tmc:DD.3 rdf:type owl:Class ;
+         rdfs:subClassOf tmc:DD .
+
+
+###  http://www.example.org/tmc#DD.3.1
+tmc:DD.3.1 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:DD.3 .
+
+
+###  http://www.example.org/tmc#DD.3.2
+tmc:DD.3.2 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:DD.3 .
+
+
+###  http://www.example.org/tmc#DD.3.3
+tmc:DD.3.3 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:DD.3 .
+
+
+###  http://www.example.org/tmc#DD.3.4
+tmc:DD.3.4 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:DD.3 .
+
+
+###  http://www.example.org/tmc#DD.4
+tmc:DD.4 rdf:type owl:Class ;
+         rdfs:subClassOf tmc:DD .
+
+
+###  http://www.example.org/tmc#DD.4.1
+tmc:DD.4.1 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:DD.4 .
+
+
+###  http://www.example.org/tmc#DD.4.1.1
+tmc:DD.4.1.1 rdf:type owl:Class ;
+             rdfs:subClassOf tmc:DD.4.1 .
+
+
+###  http://www.example.org/tmc#DD.4.1.2
+tmc:DD.4.1.2 rdf:type owl:Class ;
+             rdfs:subClassOf tmc:DD.4.1 .
+
+
+###  http://www.example.org/tmc#DD.4.2
+tmc:DD.4.2 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:DD.4 .
+
+
+###  http://www.example.org/tmc#I
+tmc:I rdf:type owl:Class ;
+      tmc:hasChildren tmc:I.1 ,
+                      tmc:I.2 .
+
+
+###  http://www.example.org/tmc#I.1
+tmc:I.1 rdf:type owl:Class ;
+        rdfs:subClassOf tmc:I .
+
+
+###  http://www.example.org/tmc#I.1.2
+tmc:I.1.2 rdf:type owl:Class ;
+          rdfs:subClassOf tmc:I.1 .
+
+
+###  http://www.example.org/tmc#I.2
+tmc:I.2 rdf:type owl:Class ;
+        rdfs:subClassOf tmc:I .
+
+
+###  http://www.example.org/tmc#I.2.1
+tmc:I.2.1 rdf:type owl:Class ;
+          rdfs:subClassOf tmc:I.2 .
+
+
+###  http://www.example.org/tmc#I.2.1.1
+tmc:I.2.1.1 rdf:type owl:Class ;
+            rdfs:subClassOf tmc:I.2.1 .
+
+
+###  http://www.example.org/tmc#I.2.1.2
+tmc:I.2.1.2 rdf:type owl:Class ;
+            rdfs:subClassOf tmc:I.2.1 .
+
+
+###  http://www.example.org/tmc#I.2.2
+tmc:I.2.2 rdf:type owl:Class ;
+          rdfs:subClassOf tmc:I.2 .
+
+
+###  http://www.example.org/tmc#I.2.3
+tmc:I.2.3 rdf:type owl:Class ;
+          rdfs:subClassOf tmc:I.2 .
+
+
+###  http://www.example.org/tmc#L
+tmc:L rdf:type owl:Class ;
+      tmc:hasChildren tmc:L.1 ,
+                      tmc:L.2 .
+
+
+###  http://www.example.org/tmc#L.1
+tmc:L.1 rdf:type owl:Class ;
+        rdfs:subClassOf tmc:L .
+
+
+###  http://www.example.org/tmc#L.1.1
+tmc:L.1.1 rdf:type owl:Class ;
+          rdfs:subClassOf tmc:L.1 .
+
+
+###  http://www.example.org/tmc#L.2
+tmc:L.2 rdf:type owl:Class ;
+        rdfs:subClassOf tmc:L .
+
+
+###  http://www.example.org/tmc#L.2.1
+tmc:L.2.1 rdf:type owl:Class ;
+          rdfs:subClassOf tmc:L.2 .
+
+
+###  http://www.example.org/tmc#L.2.1.1
+tmc:L.2.1.1 rdf:type owl:Class ;
+            rdfs:subClassOf tmc:L.2.1 .
+
+
+###  http://www.example.org/tmc#L.2.1.2
+tmc:L.2.1.2 rdf:type owl:Class ;
+            rdfs:subClassOf tmc:L.2.1 .
+
+
+###  http://www.example.org/tmc#L.2.2
+tmc:L.2.2 rdf:type owl:Class ;
+          rdfs:subClassOf tmc:L.2 .
+
+
+###  http://www.example.org/tmc#L.2.2.1
+tmc:L.2.2.1 rdf:type owl:Class ;
+            rdfs:subClassOf tmc:L.2.2 .
+
+
+###  http://www.example.org/tmc#L.2.2.2
+tmc:L.2.2.2 rdf:type owl:Class ;
+            rdfs:subClassOf tmc:L.2.2 .
+
+
+###  http://www.example.org/tmc#L.2.2.3
+tmc:L.2.2.3 rdf:type owl:Class ;
+            rdfs:subClassOf tmc:L.2.2 .
+
+
+###  http://www.example.org/tmc#Nc
+tmc:Nc rdf:type owl:Class ;
+       tmc:hasChildren tmc:Nc.1 ,
+                       tmc:Nc.2 ,
+                       tmc:Nc.3 .
+
+
+###  http://www.example.org/tmc#Nc.1
+tmc:Nc.1 rdf:type owl:Class ;
+         rdfs:subClassOf tmc:Nc .
+
+
+###  http://www.example.org/tmc#Nc.1.1
+tmc:Nc.1.1 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:Nc.1 .
+
+
+###  http://www.example.org/tmc#Nc.1.1.1
+tmc:Nc.1.1.1 rdf:type owl:Class ;
+             rdfs:subClassOf tmc:Nc.1.1 .
+
+
+###  http://www.example.org/tmc#Nc.1.1.2
+tmc:Nc.1.1.2 rdf:type owl:Class ;
+             rdfs:subClassOf tmc:Nc.1.1 .
+
+
+###  http://www.example.org/tmc#Nc.1.1.3
+tmc:Nc.1.1.3 rdf:type owl:Class ;
+             rdfs:subClassOf tmc:Nc.1.1 ;
+             tmc:hasChildren tmc:Nc.1.1.3.1 ,
+                             tmc:Nc.1.1.3.2 .
+
+
+###  http://www.example.org/tmc#Nc.1.1.3.1
+tmc:Nc.1.1.3.1 rdf:type owl:Class ;
+               rdfs:subClassOf tmc:Nc.1.1.3 .
+
+
+###  http://www.example.org/tmc#Nc.1.1.3.2
+tmc:Nc.1.1.3.2 rdf:type owl:Class ;
+               rdfs:subClassOf tmc:Nc.1.1.3 .
+
+
+###  http://www.example.org/tmc#Nc.1.1.4
+tmc:Nc.1.1.4 rdf:type owl:Class ;
+             rdfs:subClassOf tmc:Nc.1.1 .
+
+
+###  http://www.example.org/tmc#Nc.2
+tmc:Nc.2 rdf:type owl:Class ;
+         rdfs:subClassOf tmc:Nc .
+
+
+###  http://www.example.org/tmc#Nc.3
+tmc:Nc.3 rdf:type owl:Class ;
+         rdfs:subClassOf tmc:Nc .
+
+
+###  http://www.example.org/tmc#Nr
+tmc:Nr rdf:type owl:Class ;
+       tmc:hasChildren tmc:Nr.1 ,
+                       tmc:Nr.2 .
+
+
+###  http://www.example.org/tmc#Nr.1
+tmc:Nr.1 rdf:type owl:Class ;
+         rdfs:subClassOf tmc:Nr .
+
+
+###  http://www.example.org/tmc#Nr.1.1
+tmc:Nr.1.1 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:Nr.1 .
+
+
+###  http://www.example.org/tmc#Nr.1.2
+tmc:Nr.1.2 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:Nr.1 .
+
+
+###  http://www.example.org/tmc#Nr.1.3
+tmc:Nr.1.3 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:Nr.1 .
+
+
+###  http://www.example.org/tmc#Nr.1.4
+tmc:Nr.1.4 rdf:type owl:Class ;
+           rdfs:subClassOf tmc:Nr.1 .
+
+
+###  http://www.example.org/tmc#Nr.2
+tmc:Nr.2 rdf:type owl:Class ;
+         rdfs:subClassOf tmc:Nr .
+
+
+###  http://www.example.org/tmc#ThreatTrees
+tmc:ThreatTrees rdf:type owl:Class .
+
+
+###  http://www.example.org/tmc#U
+tmc:U rdf:type owl:Class ;
+      tmc:hasChildren tmc:U.1 ,
+                      tmc:U.2 .
+
+
+###  http://www.example.org/tmc#U.1
+tmc:U.1 rdf:type owl:Class ;
+        rdfs:subClassOf tmc:U .
+
+
+###  http://www.example.org/tmc#U.1.2
+tmc:U.1.2 rdf:type owl:Class ;
+          rdfs:subClassOf tmc:U.1 .
+
+
+###  http://www.example.org/tmc#U.2
+tmc:U.2 rdf:type owl:Class ;
+        rdfs:subClassOf tmc:U .
+
+
+###  http://www.example.org/tmc#U.2.1
+tmc:U.2.1 rdf:type owl:Class ;
+          rdfs:subClassOf tmc:U.2 .
+
+
+###  http://www.example.org/tmc#U.2.2
+tmc:U.2.2 rdf:type owl:Class ;
+          rdfs:subClassOf tmc:U.2 .
+
+
+###  http://www.example.org/tmc#U.2.3
+tmc:U.2.3 rdf:type owl:Class ;
+          rdfs:subClassOf tmc:U.2 .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.example.org/tmc#D.1
+tmc:D.1 rdf:type owl:NamedIndividual ,
+                 tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#D.2
+tmc:D.2 rdf:type owl:NamedIndividual ,
+                 tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#D.3
+tmc:D.3 rdf:type owl:NamedIndividual ,
+                 tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.1
+tmc:DD.1 rdf:type owl:NamedIndividual ,
+                  tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.1.1
+tmc:DD.1.1 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.1.2
+tmc:DD.1.2 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.1.3
+tmc:DD.1.3 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.2
+tmc:DD.2 rdf:type owl:NamedIndividual ,
+                  tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.2.1
+tmc:DD.2.1 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.2.2
+tmc:DD.2.2 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.2.3
+tmc:DD.2.3 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.3
+tmc:DD.3 rdf:type owl:NamedIndividual ,
+                  tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.3.1
+tmc:DD.3.1 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.3.2
+tmc:DD.3.2 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.3.3
+tmc:DD.3.3 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.3.4
+tmc:DD.3.4 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.4
+tmc:DD.4 rdf:type owl:NamedIndividual ,
+                  tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.4.1
+tmc:DD.4.1 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.4.1.1
+tmc:DD.4.1.1 rdf:type owl:NamedIndividual ,
+                      tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.4.1.2
+tmc:DD.4.1.2 rdf:type owl:NamedIndividual ,
+                      tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#DD.4.2
+tmc:DD.4.2 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#I.1
+tmc:I.1 rdf:type owl:NamedIndividual ,
+                 tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#I.1.2
+tmc:I.1.2 rdf:type owl:NamedIndividual ,
+                   tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#I.2
+tmc:I.2 rdf:type owl:NamedIndividual ,
+                 tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#I.2.1
+tmc:I.2.1 rdf:type owl:NamedIndividual ,
+                   tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#I.2.1.1
+tmc:I.2.1.1 rdf:type owl:NamedIndividual ,
+                     tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#I.2.1.2
+tmc:I.2.1.2 rdf:type owl:NamedIndividual ,
+                     tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#I.2.2
+tmc:I.2.2 rdf:type owl:NamedIndividual ,
+                   tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#I.2.3
+tmc:I.2.3 rdf:type owl:NamedIndividual ,
+                   tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#L.1
+tmc:L.1 rdf:type owl:NamedIndividual ,
+                 tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#L.1.1
+tmc:L.1.1 rdf:type owl:NamedIndividual ,
+                   tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#L.2
+tmc:L.2 rdf:type owl:NamedIndividual ,
+                 tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#L.2.1
+tmc:L.2.1 rdf:type owl:NamedIndividual ,
+                   tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#L.2.1.1
+tmc:L.2.1.1 rdf:type owl:NamedIndividual ,
+                     tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#L.2.1.2
+tmc:L.2.1.2 rdf:type owl:NamedIndividual ,
+                     tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#L.2.2
+tmc:L.2.2 rdf:type owl:NamedIndividual ,
+                   tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#L.2.2.1
+tmc:L.2.2.1 rdf:type owl:NamedIndividual ,
+                     tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#L.2.2.2
+tmc:L.2.2.2 rdf:type owl:NamedIndividual ,
+                     tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#L.2.2.3
+tmc:L.2.2.3 rdf:type owl:NamedIndividual ,
+                     tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nc.1
+tmc:Nc.1 rdf:type owl:NamedIndividual ,
+                  tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nc.1.1
+tmc:Nc.1.1 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nc.1.1.1
+tmc:Nc.1.1.1 rdf:type owl:NamedIndividual ,
+                      tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nc.1.1.2
+tmc:Nc.1.1.2 rdf:type owl:NamedIndividual ,
+                      tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nc.1.1.3.1
+tmc:Nc.1.1.3.1 rdf:type owl:NamedIndividual ,
+                        tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nc.1.1.3.2
+tmc:Nc.1.1.3.2 rdf:type owl:NamedIndividual ,
+                        tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nc.1.1.4
+tmc:Nc.1.1.4 rdf:type owl:NamedIndividual ,
+                      tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nc.2
+tmc:Nc.2 rdf:type owl:NamedIndividual ,
+                  tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nc.3
+tmc:Nc.3 rdf:type owl:NamedIndividual ,
+                  tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nr.1
+tmc:Nr.1 rdf:type owl:NamedIndividual ,
+                  tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nr.1.1
+tmc:Nr.1.1 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nr.1.2
+tmc:Nr.1.2 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nr.1.3
+tmc:Nr.1.3 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nr.1.4
+tmc:Nr.1.4 rdf:type owl:NamedIndividual ,
+                    tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#Nr.2
+tmc:Nr.2 rdf:type owl:NamedIndividual ,
+                  tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#U.1
+tmc:U.1 rdf:type owl:NamedIndividual ,
+                 tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#U.1.2
+tmc:U.1.2 rdf:type owl:NamedIndividual ,
+                   tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#U.2
+tmc:U.2 rdf:type owl:NamedIndividual ,
+                 tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#U.2.1
+tmc:U.2.1 rdf:type owl:NamedIndividual ,
+                   tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#U.2.2
+tmc:U.2.2 rdf:type owl:NamedIndividual ,
+                   tmc:ThreatTrees .
+
+
+###  http://www.example.org/tmc#U.2.3
+tmc:U.2.3 rdf:type owl:NamedIndividual ,
+                   tmc:ThreatTrees .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+tmc:D.1 tmc:Additional_Info "Sensitive context: In sensitive contexts (medical, whistleblower) detecting service usage may have a severe impact on the user." ;
+        tmc:Code "D.1" ;
+        tmc:Criteria "['Can the communication be observed?', 'Can information be inferred from the observed communications?']" ;
+        tmc:Examples "Infer user of a website: Observing communication to a service allows inferring that a person is a user (e.g., adult website)." ,
+                     "Telemedicine e-health system: Communication to a telemedicine service implies the user is a patient." ,
+                     "Tor network participant: Participation in the Tor network can be determined by observing traffic." ,
+                     "Wireless transmissions: Wireless transmissions are detectable by other devices nearby." ;
+        tmc:Impact "Sensitive context: In sensitive contexts (medical, whistleblower) detecting service usage may have a severe impact on the user." ;
+        tmc:id "D.1" ;
+        rdfs:comment "Detecting threats represent cases of becoming aware of data subject involvement, membership, or participation to the system." ;
+        rdfs:label "D.1" .
+
+
+tmc:D.2 tmc:Additional_Info "Infer sensitive data: Sensitive information could be inferred from communication (e.g., positive test result)." ;
+        tmc:Code "D.2" ;
+        tmc:Criteria "['Do actions in the system have side-effects (e.g., triggering other transmissions)?', 'Are these side-effects detectable?']" ;
+        tmc:Examples "Deleted application: Deleted applications may leave behind trails (configuration, temporary files)." ,
+                     "Hidden data: When steganography is used to hide data, the increased file size may still indicate the existence of that hidden data." ,
+                     "System logs: Log files on a shared system reveal applications used by other users." ;
+        tmc:Impact "Infer sensitive data: Sensitive information could be inferred from communication (e.g., positive test result)." ;
+        tmc:id "D.2" ;
+        rdfs:comment "Detecting through (trans)action side-effects." ;
+        rdfs:label "D.2" .
+
+
+tmc:D.3 tmc:Additional_Info """Detecting can lead to security threats: Being able to detect the existence of certain items can be a stepping stone to security threats.
+Existence: Knowing the existence of data could be sufficient to infer sensitive information.""" ;
+        tmc:Code "D.3" ;
+        tmc:Criteria "['Does the system show error messages when retrieving data?', 'Are the error messages different when the item does not exist (versus not having access rights)?']" ;
+        tmc:Examples "Address already registered: An error message indicating 'address already registered' when subscribing to a political newsletter reveals current members." ,
+                     "Bounced email: The existence of email accounts can be inferred from bounced emails." ,
+                     "Cached browser resources: To speed up the loading of websites, browsers can provide certain remote resources from their local cache. This enables detecting which resources were already cached." ,
+                     "DB access denied: An error message indicating 'insufficient access rights' may leak the existence of a particular record." ,
+                     "Firewall: A firewall responding with closed port reveals the existence of a device at the IP address." ,
+                     "Wrong password: A 'wrong password' error message reveals the existence of the account." ;
+        tmc:Impact """Detecting can lead to security threats: Being able to detect the existence of certain items can be a stepping stone to security threats.
+Existence: Knowing the existence of data could be sufficient to infer sensitive information.""" ;
+        tmc:id "D.3" ;
+        rdfs:comment "The existence of an item of interest is revealed in a system response (which can be evoked deliberately or given accidentally)." ;
+        rdfs:label "D.3" .
+
+
+tmc:DD.1 tmc:Additional_Info "Amplify data breach impact: Processing excessively sensitive data amplifies the impact of a potential data breach, increasing the impact on the affected individuals." ;
+         tmc:Code "DD.1" ;
+         tmc:Criteria "Is the data more sensitive than strictly necessary?" ;
+         tmc:Examples "Patient health monitoring: Tracking a patient�s weight is relevant for dieting apps but not for a contact tracing application." ;
+         tmc:Impact "Amplify data breach impact: Processing excessively sensitive data amplifies the impact of a potential data breach, increasing the impact on the affected individuals." ;
+         tmc:hasChildren tmc:DD.1.1 ,
+                         tmc:DD.1.2 ,
+                         tmc:DD.1.3 ;
+         tmc:id "DD.1" ;
+         rdfs:comment "Data Disclosure - Unnecessary data types" ;
+         rdfs:label "DD.1" .
+
+
+tmc:DD.1.1 tmc:Code "DD.1.1" ;
+           tmc:Criteria "Is the data more sensitive than strictly necessary?" ;
+           tmc:Examples "More sensitive data types are collected than functionally required by the system." ;
+           tmc:id "DD.1.1" ;
+           rdfs:comment "Data Disclosure - Data type sensitivity" ;
+           rdfs:label "DD.1.1" .
+
+
+tmc:DD.1.2 tmc:Code "DD.1.2" ;
+           tmc:Criteria "Is the data more fine-grained than strictly necessary?" ;
+           tmc:Examples "Smart meter: A smart meter shares real-time measurements rather than the aggregated consumption." ;
+           tmc:id "DD.1.2" ;
+           rdfs:comment "Data Disclosure - Data type granularity" ;
+           rdfs:label "DD.1.2" .
+
+
+tmc:DD.1.3 tmc:Code "DD.1.3" ;
+           tmc:Criteria "Does the data encoding include other (meta)data?" ;
+           tmc:Examples "Camera app: A camera application on a smartphone does not necessarily need to record the location of where the picture was taken." ,
+                        "Geo-tagged photos: The transmission of geo-tagged pictures also includes location data of the individual that took the pictures." ,
+                        "Metadata: Documents processed may automatically include metadata that contain personal data such as the author or reviewer of a document." ;
+           tmc:id "DD.1.3" ;
+           rdfs:comment "Data Disclosure - Data type encoding" ;
+           rdfs:label "DD.1.3" .
+
+
+tmc:DD.2 tmc:Code "DD.2" ;
+         tmc:hasChildren tmc:DD.2.1 ,
+                         tmc:DD.2.2 ,
+                         tmc:DD.2.3 ;
+         tmc:id "DD.2" ;
+         rdfs:comment "Data Disclosure - Excessive volume" ;
+         rdfs:label "DD.2" .
+
+
+tmc:DD.2.1 tmc:Code "DD.2.1" ;
+           tmc:Criteria "Is the amount of data necessary?" ;
+           tmc:Examples "Data subject age: A service that is not age-restricted and offers generic functionality should not ask for a user�s age" ;
+           tmc:id "DD.2.1" ;
+           rdfs:comment "Data Disclosure - Amount" ;
+           rdfs:label "DD.2.1" .
+
+
+tmc:DD.2.2 tmc:Additional_Info "Frequent collection: Frequent collection leads to more data that can cause other privacy threats, such as mining that data for patterns." ;
+           tmc:Code "DD.2.2" ;
+           tmc:Criteria "Is the processing frequency necessary?" ;
+           tmc:Examples "Patient weight recording: It may be necessary only to record patient weight on a weekly or monthly basis, and collecting such information every half hour is considered unnecessary." ;
+           tmc:Impact "Frequent collection: Frequent collection leads to more data that can cause other privacy threats, such as mining that data for patterns." ;
+           tmc:id "DD.2.2" ;
+           rdfs:comment "Data Disclosure - Frequency" ;
+           rdfs:label "DD.2.2" .
+
+
+tmc:DD.2.3 tmc:Code "DD.2.3" ;
+           tmc:Criteria "Are there more data subjects involved than necessary?" ;
+           tmc:Examples "Posting on social networks: Posts on social networks frequently include personal data on other people." ;
+           tmc:id "DD.2.3" ;
+           rdfs:comment "Data Disclosure - Involved data subjects" ;
+           rdfs:label "DD.2.3" .
+
+
+tmc:DD.3 tmc:Code "DD.3" ;
+         tmc:hasChildren tmc:DD.3.1 ,
+                         tmc:DD.3.2 ,
+                         tmc:DD.3.3 ,
+                         tmc:DD.3.4 ;
+         tmc:id "DD.3" ;
+         rdfs:comment "Data Disclosure - Unnecessary processing" ;
+         rdfs:label "DD.3" .
+
+
+tmc:DD.3.1 tmc:Additional_Info "Processing can increase sensitivity: Processing the data can be used to learn additional sensitive information." ;
+           tmc:Code "DD.3.1" ;
+           tmc:Criteria "Is the data enrichment/analysis necessary for the system�s functionality?" ;
+           tmc:Examples "Constructing profiles on individuals: User profiles accumulate and grow over time, keeping track of a wide range of actions or service usage, which is not necessary for the functionality." ,
+                        "Face recognition, emotion detection: A camera application on a smartphone does not need to perform face-based recognition or emotion detection." ,
+                        "Facial expression analysis: Sentiment analysis can be applied to faces in pictures to derive the emotional state of the individual in the photo." ,
+                        "Text analysis: Analyzing a user�s blog posts for language proficiency is unnecessary for blogging functionality." ;
+           tmc:Impact "Processing can increase sensitivity: Processing the data can be used to learn additional sensitive information." ;
+           tmc:id "DD.3.1" ;
+           rdfs:comment "Data Disclosure - Treatment, analysis, enrichment, transformation" ;
+           rdfs:label "DD.3.1" .
+
+
+tmc:DD.3.2 tmc:Code "DD.3.2" ;
+           tmc:Criteria "Is the data necessary for the recipient?" ;
+           tmc:Examples "Propagation of location data: Location data from a navigation application is propagated to all the other applications (e.g., calendar, mail)." ;
+           tmc:id "DD.3.2" ;
+           rdfs:comment "Data Disclosure - Propagation" ;
+           rdfs:label "DD.3.2" .
+
+
+tmc:DD.3.3 tmc:Code "DD.3.3" ;
+           tmc:Criteria "Do service usage (patterns) reveal user data?" ;
+           tmc:Examples "Service usage: Data gathered on the usage of a service (such as connection times or durations)." ;
+           tmc:id "DD.3.3" ;
+           rdfs:comment "Data Disclosure - Implicit data disclosure" ;
+           rdfs:label "DD.3.3" .
+
+
+tmc:DD.3.4 tmc:Additional_Info "Storing data longer than needed: Storing data longer than needed serves no further purpose and increases the impact of a data breach." ;
+           tmc:Code "DD.3.4" ;
+           tmc:Criteria "Is the data stored longer than necessary?" ;
+           tmc:Examples "Retaining newsletter subscriber addresses: Retaining the email addresses of newsletter subscribers long after they have unsubscribed." ;
+           tmc:Impact "Storing data longer than needed: Storing data longer than needed serves no further purpose and increases the impact of a data breach." ;
+           tmc:id "DD.3.4" ;
+           rdfs:comment "Data Disclosure - Duration/retention" ;
+           rdfs:label "DD.3.4" .
+
+
+tmc:DD.4 tmc:Code "DD.4" ;
+         tmc:hasChildren tmc:DD.4.1 ,
+                         tmc:DD.4.2 ;
+         tmc:id "DD.4" ;
+         rdfs:comment "Data Disclosure - Involved parties and exposure" ;
+         rdfs:label "DD.4" .
+
+
+tmc:DD.4.1 tmc:Code "DD.4.1" ;
+           tmc:hasChildren tmc:DD.4.1.1 ,
+                           tmc:DD.4.1.2 ;
+           tmc:id "DD.4.1" ;
+           rdfs:comment "Data Disclosure - Involved parties" ;
+           rdfs:label "DD.4.1" .
+
+
+tmc:DD.4.1.1 tmc:Code "DD.4.1.1" ;
+             tmc:Criteria "Are there more parties involved than necessary?" ;
+             tmc:Examples "Sharing data to advertisers: In a health application, even if collecting patient weight data is considered necessary, sharing this data with third-party advertisers is unnecessary and harmful." ,
+                          "Speech data: Speech data sent to a third-party transcription service can, apart from speech content, reveal additional information about the individual such as mother tongue, gender, etc." ,
+                          "Third-party email delivery: When using third-party service providers for email delivery, personal data (e.g., about sender and recipients) is directly shared with these third parties." ,
+                          "Use of third-party tracking and analytics services: Using third-party tracking and analytics services on websites involves transferring personal data about the user and their site usage to third parties." ;
+             tmc:id "DD.4.1.1" ;
+             rdfs:comment "Data Disclosure - Predetermined set of parties" ;
+             rdfs:label "DD.4.1.1" .
+
+
+tmc:DD.4.1.2 tmc:Code "DD.4.1.2" ;
+             tmc:Criteria "Are there more parties involved than necessary?" ;
+             tmc:Examples "Shared with users: Personal data of an individual may be shared with other users of the service." ;
+             tmc:id "DD.4.1.2" ;
+             rdfs:comment "Data Disclosure - Dynamic set of parties" ;
+             rdfs:label "DD.4.1.2" .
+
+
+tmc:DD.4.2 tmc:Additional_Info "Overbroad sharing: Overbroad sharing of personal data can have unintended consequences as others could reuse that data for unanticipated purposes." ;
+           tmc:Code "DD.4.2" ;
+           tmc:Criteria "How accessible is the data (public/limited/private)?" ;
+           tmc:Examples "Collecting web traffic: The lack of encryption enables an external adversary to read the personal data being exchanged with the system." ,
+                        "Doxing: Posting personal data of other people to publicly shame them, extort them, or trigger vigilante attacks, etc." ,
+                        "Lookup company founding data: The original publication of a company�s foundation reveals the home addresses of the founders." ,
+                        "Phone number search: Searching user by phone number can be used to discover/confirm someone else�s phone number." ,
+                        "Publishing research datasets: In a medical application, even if collecting patient weight data is considered necessary, making public such datasets will be considered unnecessary and harmful." ,
+                        "Query interface reveals personal data: Query interfaces to search for people working in specific areas may reveal their location of employment." ,
+                        "Sending private messages over a social network: Posting private messages to a person through a social network in a public forum that may be seen and monitored by many." ;
+           tmc:Impact "Overbroad sharing: Overbroad sharing of personal data can have unintended consequences as others could reuse that data for unanticipated purposes." ;
+           tmc:id "DD.4.2" ;
+           rdfs:comment "Data Disclosure - Availability/accessibility of data" ;
+           rdfs:label "DD.4.2" .
+
+
+tmc:I.1 tmc:Additional_Info "Data breach amplification: Identified data can severely amplify the impact of a future data breach. Depending on the context, the identity may reveal very sensitive attributes (e.g., health records)." ;
+        tmc:Code "I.1" ;
+        tmc:Criteria "Does data sent to the system contain identity information?" ;
+        tmc:Examples "Identification based on username: The username contains identity information (e.g., �firstname.lastname�)." ,
+                     "Online service registration: An online service requests full name and address during the registration process." ;
+        tmc:Impact "['Data breach amplification: Identified data can severely amplify the impact of a future data breach.', 'Reveal sensitive information about an individual: Depending on the context, the identity may reveal very sensitive attributes (e.g., health records).']" ;
+        tmc:hasChildren tmc:I.1.2 ;
+        tmc:id "I.1" ;
+        rdfs:comment "Identified Information is requested or processed." ;
+        rdfs:label "I.1" .
+
+
+tmc:I.1.2 tmc:Additional_Info "Unintentional identification: The presence of identifying data in metadata may lead to the unintentional identification of a data subject." ;
+          tmc:Code "I.1.2" ;
+          tmc:Criteria "Does the system process data that has metadata associated with it? Does the associated metadata contain identified information?" ;
+          tmc:Examples "Author information in document metadata: A software product for authoring documents may automatically insert author information in the metadata of the produced documents." ;
+          tmc:Impact "Unintentional identification: The presence of identifying data in metadata may lead to the unintentional identification of a data subject." ;
+          tmc:id "I.1.2" ;
+          rdfs:comment "The metadata of files or communication involves identified information." ;
+          rdfs:label "I.1.2" .
+
+
+tmc:I.2 tmc:Code "I.2" ;
+        tmc:hasChildren tmc:I.2.1 ,
+                        tmc:I.2.2 ,
+                        tmc:I.2.3 ;
+        tmc:id "I.2" ;
+        rdfs:comment "The system processes identifiable information from which the identity of the data subject may be derived." ;
+        rdfs:label "I.2" .
+
+
+tmc:I.2.1 tmc:Code "I.2.1" ;
+          tmc:hasChildren tmc:I.2.1.1 ,
+                          tmc:I.2.1.2 ;
+          tmc:id "I.2.1" ;
+          rdfs:comment "The data contains unique references to the identity of the data subject." ;
+          rdfs:label "I.2.1" .
+
+
+tmc:I.2.1.1 tmc:Additional_Info "De-anonymize: Pseudonyms makes it easy to aggregate data on the same individual (see linking), with enough data it can be possible to identify that individual." ;
+            tmc:Code "I.2.1.1" ;
+            tmc:Criteria "Is there a unique identifier used in interactions or when referring to data of an individual?" ;
+            tmc:Examples "IP addresses: IP addresses in communication can be used to uniquely identify an individual." ,
+                         "Insufficient de-identification: Globally unique identifiers (e.g., SSN) are replaced by internal ids. These are still tied to the actual identity." ,
+                         "Online service username: The (re)use of an email address makes it trivial to combine with other data to identify the individual." ;
+            tmc:Impact "De-anonymize: Pseudonyms makes it easy to aggregate data on the same individual (see linking), with enough data it can be possible to identify that individual." ;
+            tmc:id "I.2.1.1" ;
+            rdfs:comment "The data contains a unique reference to the identity of the data subject." ;
+            rdfs:label "I.2.1.1" .
+
+
+tmc:I.2.1.2 tmc:Code "I.2.1.2" ;
+            tmc:Criteria "Are there multiple attributes that can be combined to uniquely refer to an individual (or their data)?" ;
+            tmc:Examples "Browser fingerprint: Browser fingerprinting can be used to combine different properties to construct a unique identifier that serves as a pseudonym for the user." ,
+                         "Dataset with quasi-identifiers: A dataset removes name, and reduces address to city. However, a combination of different attributes is still sufficient to identify the individuals." ;
+            tmc:id "I.2.1.2" ;
+            rdfs:comment "The data contains combinations of attributes that are unique to a data subject." ;
+            rdfs:label "I.2.1.2" .
+
+
+tmc:I.2.2 tmc:Additional_Info "Accidentally revealing identity: Providing revealing attributes in user-submitted data may unintentionally lead to the identification of the individual." ;
+          tmc:Code "I.2.2" ;
+          tmc:Criteria "Is there free-form user provided data that is received or processed by the system? Is data collected that may reveal the identifying information?" ;
+          tmc:Examples "Feedback form: When a person shares sufficiently detailed data (e.g., location, employer, device type, ...) in a feedback form, the provided data may be sufficiently revealing to be able to uniquely identify that person." ;
+          tmc:Impact "Accidentally revealing identity: Providing revealing attributes in user-submitted data may unintentionally lead to the identification of the individual." ;
+          tmc:id "I.2.2" ;
+          rdfs:comment "A number of revealing attributes are included in the data which support the identification of the data subject." ;
+          rdfs:label "I.2.2" .
+
+
+tmc:I.2.3 tmc:Additional_Info "Reveal identity: Even without identity information, user actions or data may be very specific and unintentionally reveal the identity." ;
+          tmc:Code "I.2.3" ;
+          tmc:Criteria "Are requests or records sufficiently unique to distinguish those from a particular individual?" ;
+          tmc:Examples "Biometric authentication: Authentication with biometrics (e.g., fingerprint or iris) work based on being able to uniquely link these biometric properties to a single user." ,
+                       "Distinguishable website visitor: A web shop tracks a user�s access. John Doe only accesses the site at a particular time in the week, which could be used to link his visits." ,
+                       "Face recognition: The use of facial recognition processing on, for example, profile images can enable the derivation of attributes that can be combined to identify the depicted individual." ,
+                       "Gait recognition: An individual�s gait can be used to uniquely identify them." ,
+                       "Individual queries: A user�s search queries are very specific to that user which may lead to their identification." ,
+                       "Queries with small resultset: Queries with a very small result set could deliver results unique to a particular individual." ;
+          tmc:Impact "Reveal identity: Even without identity information, user actions or data may be very specific and unintentionally reveal the identity." ;
+          tmc:id "I.2.3" ;
+          rdfs:comment "The anonymity set is too small, which allows singling out an individual data subject." ;
+          rdfs:label "I.2.3" .
+
+
+tmc:L.1 tmc:Code "L.1" ;
+        tmc:hasChildren tmc:L.1.1 ;
+        tmc:id "L.1" ;
+        rdfs:comment "Linked data" ;
+        rdfs:label "L.1" .
+
+
+tmc:L.1.1 tmc:Additional_Info "['Construct profile: The use of unique identifiers enables the linking of new data items to a user profile to gather increasing amounts of personal data linked to this profile. This can later lead to �Identifying� threats.']" ;
+          tmc:Code "L.1.1" ;
+          tmc:Criteria "['Is there an identifier (unique within the system or session) or dataset?', 'Is there other data associated with that identifier?', 'Is there previous data with the same identifier to which new data can be linked?']" ;
+          tmc:Examples "Email address as ID" ,
+                       "IP addresses" ,
+                       "Logged in web shop" ,
+                       "User IDs" ;
+          tmc:Impact "['Construct profile: The use of unique identifiers enables the linking of new data items to a user profile to gather increasing amounts of personal data linked to this profile. This can later lead to �Identifying� threats.']" ;
+          tmc:id "L.1.1" ;
+          rdfs:comment "Unique identifier" ;
+          rdfs:label "L.1.1" .
+
+
+tmc:L.2 tmc:Code "L.2" ;
+        tmc:hasChildren tmc:L.2.1 ,
+                        tmc:L.2.2 ;
+        tmc:id "L.2" ;
+        rdfs:comment "Linkable data" ;
+        rdfs:label "L.2" .
+
+
+tmc:L.2.1 tmc:Code "L.2.1" ;
+          tmc:hasChildren tmc:L.2.1.1 ,
+                          tmc:L.2.1.2 ;
+          tmc:id "L.2.1" ;
+          rdfs:comment "Through Combination" ;
+          rdfs:label "L.2.1" .
+
+
+tmc:L.2.1.1 tmc:Additional_Info "['Construct profile: The use of quasi-identifiers enables the linking of new data items to a user profile to gather increasing amounts of personal data, even without unique identifiers.']" ;
+            tmc:Code "L.2.1.1" ;
+            tmc:Criteria "['Is there a set of attributes that can serve as an identifier?', 'Is there other data sent together with that quasi-identifier?', 'Is there existing data to link it to?']" ;
+            tmc:Examples "Age-gender-postalcode" ,
+                         "Browser fingerprint" ,
+                         "Fine-grained raw data" ,
+                         "Location trace" ;
+            tmc:Impact "['Construct profile: The use of quasi-identifiers enables the linking of new data items to a user profile to gather increasing amounts of personal data, even without unique identifiers.']" ;
+            tmc:id "L.2.1.1" ;
+            rdfs:comment "Quasi-identifier combining data of a single individual" ;
+            rdfs:label "L.2.1.1" .
+
+
+tmc:L.2.1.2 tmc:Additional_Info "['Construct profile: The combination of records from multiple different sources enables building a more comprehensive profile on an individual.']" ;
+            tmc:Code "L.2.1.2" ;
+            tmc:Criteria "['Is data from multiple users combined?', 'Are datasets or records combined?']" ;
+            tmc:Examples "Contact lists" ,
+                         "Social network indirect relations" ;
+            tmc:Impact "['Construct profile: The combination of records from multiple different sources enables building a more comprehensive profile on an individual.']" ;
+            tmc:id "L.2.1.2" ;
+            rdfs:comment "Combining data of different individuals" ;
+            rdfs:label "L.2.1.2" .
+
+
+tmc:L.2.2 tmc:Code "L.2.2" ;
+          tmc:hasChildren tmc:L.2.2.1 ,
+                          tmc:L.2.2.2 ,
+                          tmc:L.2.2.3 ;
+          tmc:id "L.2.2" ;
+          rdfs:comment "Through Profiling, derivation, or inference" ;
+          rdfs:label "L.2.2" .
+
+
+tmc:L.2.2.1 tmc:Additional_Info "['Link additional data: Deriving patterns from the data can enable the linking from data that was not intended to be linkable.', 'Link requests: Timing patterns of messages can be used to link requests to construct profiles.', 'Indirectly reveal sensitive data: Indirect links can reveal sensitive data about individuals that are not involved in the original dataset.']" ;
+            tmc:Code "L.2.2.1" ;
+            tmc:Criteria "['Are there patterns derivable from the data?', 'Are there patterns in the timing of requests?']" ;
+            tmc:Examples "Analyzing messages" ,
+                         "Analyzing timing patterns" ,
+                         "Requests to external services" ,
+                         "Telemedicine e-health system" ;
+            tmc:Impact "['Link additional data: Deriving patterns from the data can enable the linking from data that was not intended to be linkable.', 'Link requests: Timing patterns of messages can be used to link requests to construct profiles.', 'Indirectly reveal sensitive data: Indirect links can reveal sensitive data about individuals that are not involved in the original dataset.']" ;
+            tmc:id "L.2.2.1" ;
+            rdfs:comment "Profiling an individual" ;
+            rdfs:label "L.2.2.1" .
+
+
+tmc:L.2.2.2 tmc:Code "L.2.2.2" ;
+            tmc:Criteria "['Is there data being analyzed for patterns to generalize?']" ;
+            tmc:Examples "DNA testing service" ,
+                         "Energy consumption meter" ;
+            tmc:id "L.2.2.2" ;
+            rdfs:comment "Profiling a group of individuals" ;
+            rdfs:label "L.2.2.2" .
+
+
+tmc:L.2.2.3 tmc:Additional_Info "['Construct profile: When users are distinguishable from one another, user profiles can be constructed to gather increasing amounts of personal data linked to this profile. This can later lead to �Identifying� threats.']" ;
+            tmc:Code "L.2.2.3" ;
+            tmc:Criteria "['Is the data from different individuals distinguishable?', 'Can data be queried using distinguishable attributes?']" ;
+            tmc:Examples "Facial expression analysis" ,
+                         "Personalized shopping recommendations" ,
+                         "Salary statistics queries" ,
+                         "Through writing style" ;
+            tmc:Impact "['Construct profile: When users are distinguishable from one another, user profiles can be constructed to gather increasing amounts of personal data linked to this profile. This can later lead to �Identifying� threats.']" ;
+            tmc:id "L.2.2.3" ;
+            rdfs:comment "Profiling an individual through (dis)similarity" ;
+            rdfs:label "L.2.2.3" .
+
+
+tmc:Nc.1 tmc:Additional_Info "['There are legal consequences of the threats and/or processing activities described.']" ;
+         tmc:Code "Nc.1" ;
+         tmc:hasChildren tmc:Nc.1.1 ;
+         tmc:id "Nc.1" ;
+         rdfs:comment "Regulatory non-compliance" ;
+         rdfs:label "Nc.1" .
+
+
+tmc:Nc.1.1 tmc:Additional_Info "['GDPR-related non-compliance threat characteristics']" ;
+           tmc:Code "Nc.1.1" ;
+           tmc:hasChildren tmc:Nc.1.1.1 ,
+                           tmc:Nc.1.1.2 ,
+                           tmc:Nc.1.1.4 ;
+           tmc:id "Nc.1.1" ;
+           rdfs:comment "GDPR" ;
+           rdfs:label "Nc.1.1" .
+
+
+tmc:Nc.1.1.1 tmc:Code "Nc.1.1.1" ;
+             tmc:id "Nc.1.1.1" ;
+             rdfs:comment "Insufficient data subject controls" ;
+             rdfs:label "Nc.1.1.1" .
+
+
+tmc:Nc.1.1.2 tmc:Additional_Info "['Data breach amplification: Having more data than needed amplifies the impact of data breaches.', 'GDPR: Legislation such as the GDPR requires you not to process more than legally necessary for the processing.']" ;
+             tmc:Code "Nc.1.1.2" ;
+             tmc:Criteria "['Does the system collect or process more data than legally necessary?']" ;
+             tmc:Examples "Excessive personal data collected/processed: The system collects or processes more data than is actually needed for the purposes of the processing." ,
+                          "Web shop: A web shop collects gender, phone number, date of birth, etc., while none of this information is necessary for billing." ;
+             tmc:Impact "['Data breach amplification: Having more data than needed amplifies the impact of data breaches.', 'GDPR: Legislation such as the GDPR requires you not to process more than legally necessary for the processing.']" ;
+             tmc:id "Nc.1.1.2" ;
+             rdfs:comment "Violation of data minimization principle" ;
+             rdfs:label "Nc.1.1.2" .
+
+
+tmc:Nc.1.1.3.1 tmc:Additional_Info "['GDPR: Legislation such as the GDPR imposes specific requirements for valid consent, not meeting these can result in heavy fines.']" ;
+               tmc:Code "Nc.1.1.3.1" ;
+               tmc:Criteria "['Is the consent freely given, informed, specific, and unambiguous?', 'Can consent be withdrawn?', 'Can the consent be demonstrated?']" ;
+               tmc:Examples "Involuntary consent: The consent is not freely given but forced. A user cannot access the service without giving consent." ,
+                            "Lack of consent management: The processing relies on consent but there is no way for the data subject to give or revoke consent." ;
+               tmc:Impact "['GDPR: Legislation such as the GDPR imposes specific requirements for valid consent, not meeting these can result in heavy fines.']" ;
+               tmc:id "Nc.1.1.3.1" ;
+               rdfs:comment "Invalid consent" ;
+               rdfs:label "Nc.1.1.3.1" .
+
+
+tmc:Nc.1.1.3.2 tmc:Additional_Info "['GDPR: The GDPR imposes specific requirements for valid processing of personal data. Not meeting these can result in heavy fines.']" ;
+               tmc:Code "Nc.1.1.3.2" ;
+               tmc:Criteria "['Does the collection rely on valid, appropriate lawful grounds for a specific purpose?', 'Are there special types of processing such as automated decisions?']" ;
+               tmc:Examples "Automated-decision making: A system makes automated decisions but relies on legitimate interest rather than explicit consent or contract." ,
+                            "Loan rejection: A loan application is rejected without any possibility of human intervention." ,
+                            "Smart TV: A smart TV collects a user�s viewing data without consent or any other lawful ground." ;
+               tmc:Impact "['GDPR: The GDPR imposes specific requirements for valid processing of personal data. Not meeting these can result in heavy fines.']" ;
+               tmc:id "Nc.1.1.3.2" ;
+               rdfs:comment "Lawfulness problems not related to consent" ;
+               rdfs:label "Nc.1.1.3.2" .
+
+
+tmc:Nc.1.1.4 tmc:Additional_Info "['Data breach amplification: Having more data than needed amplifies the impact of data breaches.', 'GDPR: Legislation such as the GDPR requires you not to process more than legally necessary for the processing.']" ;
+             tmc:Code "Nc.1.1.4" ;
+             tmc:Criteria "['Does the system store data longer than legally necessary?']" ;
+             tmc:Examples "Old user accounts: A website retains user account data long after users have closed their account and withdrawn their consent." ,
+                          "Stored longer than necessary: Personal data is stored for a longer period than actually necessary to perform the processing." ;
+             tmc:Impact "['Data breach amplification: Having more data than needed amplifies the impact of data breaches.', 'GDPR: Legislation such as the GDPR requires you not to process more than legally necessary for the processing.']" ;
+             tmc:id "Nc.1.1.4" ;
+             rdfs:comment "Violation of storage limitation principle" ;
+             rdfs:label "Nc.1.1.4" .
+
+
+tmc:Nc.2 tmc:Code "Nc.2" ;
+         tmc:id "Nc.2" ;
+         rdfs:comment "Improper personal data management" ;
+         rdfs:label "Nc.2" .
+
+
+tmc:Nc.3 tmc:Additional_Info "['Security contributes to privacy: The security of the system is an important contributing factor to protecting the privacy of individuals whose data is processed.']" ;
+         tmc:Code "Nc.3" ;
+         tmc:Criteria "['Is there a process in place to manage security risks and determine the necessary countermeasures?', 'Does the system have appropriate countermeasures in place to secure the processing of personal data?']" ;
+         tmc:Examples "Lacking internal access control mechanisms: The organization does not use appropriate access control mechanisms to limit access of employees to personal data." ,
+                      "No security assessment: No security assessment was performed of the software." ,
+                      "Operational security: There are no processes in place to ensure software and services are kept up to date." ;
+         tmc:Impact "['Security contributes to privacy: The security of the system is an important contributing factor to protecting the privacy of individuals whose data is processed.']" ;
+         tmc:id "Nc.3" ;
+         rdfs:comment "Insufficient cybersecurity risk management" ;
+         rdfs:label "Nc.3" .
+
+
+tmc:Nr.1 tmc:Code "Nr.1" ;
+         tmc:hasChildren tmc:Nr.1.1 ,
+                         tmc:Nr.1.2 ,
+                         tmc:Nr.1.3 ,
+                         tmc:Nr.1.4 ;
+         tmc:id "Nr.1" ;
+         rdfs:comment "Non-repudiation threats represent outcomes in which an individual is not able to deny certain claims." ;
+         rdfs:label "Nr.1" .
+
+
+tmc:Nr.1.1 tmc:Additional_Info "['Identifying information amplification.: Identity information can amplify the impact.', 'Service context: Depending on the context (e.g., medical, whistleblower), this can have a large impact on the data subject.']" ;
+           tmc:Code "Nr.1.1" ;
+           tmc:Criteria "['Does the system record data impacting deniability?', 'Does the data itself impact deniability claims?']" ;
+           tmc:Examples "Admin access logs: System administrators can access log files that tie an entry in an internal complaint system to the individual employee." ,
+                        "Corporate email address: The use of a corporate mail address makes it impossible to deny being affiliated with that organization." ,
+                        "Credentials: An account with a corporate email address prevents the employee�s deniability of having used that service." ,
+                        "Encrypted office document: An encrypted office document still has the office file format, but requires a password to open it. This document format makes it clear that there is encrypted data." ,
+                        "Logged transmissions: Transmissions are logged as evidence of communication." ,
+                        "Random data could indicate encryption: Random data could be an indication that there is encrypted data, especially if it concerns the full drive or external device." ;
+           tmc:Impact "['Identifying information amplification.: Identity information can amplify the impact.', 'Service context: Depending on the context (e.g., medical, whistleblower), this can have a large impact on the data subject.']" ;
+           tmc:id "Nr.1.1" ;
+           rdfs:comment "A data record or message is (or can be) attributed to a user or data subject." ;
+           rdfs:label "Nr.1.1" .
+
+
+tmc:Nr.1.2 tmc:Additional_Info "['Prevent deniability: Signatures provide strong non-repudiation, as they can also be verified by third parties.', 'append-only storage: Append-only storage systems make it impossible for the data subject to later remove their personal data.']" ;
+           tmc:Code "Nr.1.2" ;
+           tmc:Criteria "['Is the data digitally signed?', 'Which keys are used for signing? Who has access to these keys to verify signatures?']" ;
+           tmc:Examples "Blockchain storage: Data stored on a blockchain cannot be modified, this prevents deniability of claims regarding this data." ,
+                        "DKIM: A common spam countermeasure (DKIM) involves signing outgoing emails, this prevents users from denying the authenticity of leaked or stolen emails." ,
+                        "Digital signatures: A digitally signed email prevents the user from later denying having written the message." ;
+           tmc:Impact "['Prevent deniability: Signatures provide strong non-repudiation, as they can also be verified by third parties.', 'append-only storage: Append-only storage systems make it impossible for the data subject to later remove their personal data.']" ;
+           tmc:id "Nr.1.2" ;
+           rdfs:comment "Signed data can prevent deniability." ;
+           rdfs:label "Nr.1.2" .
+
+
+tmc:Nr.1.3 tmc:Additional_Info "['Unintentional metadata impacting deniability: The unintentional inclusion of metadata with data or transmissions may impact deniability claims.']" ;
+           tmc:Code "Nr.1.3" ;
+           tmc:Criteria "['Is there metadata associated with the stored or transmitted data?']" ;
+           tmc:Examples "Document metadata: Author or revision metadata in documents can prevent deniability." ;
+           tmc:Impact "['Unintentional metadata impacting deniability: The unintentional inclusion of metadata with data or transmissions may impact deniability claims.']" ;
+           tmc:id "Nr.1.3" ;
+           rdfs:comment "Metadata can contain unintended data impacting deniability claims about that data." ;
+           rdfs:label "Nr.1.3" .
+
+
+tmc:Nr.1.4 tmc:Additional_Info "['Hidden data impacting deniability claims: Hidden/embedded data can prevent a user from denying claims about the data.']" ;
+           tmc:Code "Nr.1.4" ;
+           tmc:Criteria "['Are there embedded data or hidden patterns in the data or transmissions?']" ;
+           tmc:Examples "Custom secrets: Secrets shared with one person, or modified for each recipient can serve as evidence of the disclosure of that data by that person." ,
+                        "Embedded remote resources: Remote resources (e.g. image in email) are automatically loaded to track the user opening it." ,
+                        "Watermarked Data: Data watermarked with hidden artifacts (uniquely linked to a person) can be used to track the person revealing or disclosing the data afterwards." ;
+           tmc:Impact "['Hidden data impacting deniability claims: Hidden/embedded data can prevent a user from denying claims about the data.']" ;
+           tmc:id "Nr.1.4" ;
+           rdfs:comment "Embedded or hidden data can be used to reveal additional information impacting deniability claims about the data." ;
+           rdfs:label "Nr.1.4" .
+
+
+tmc:Nr.2 tmc:Additional_Info "['Action side-effect impacting deniability: Some actions may trigger side-effects that impact deniability claims regarding those actions.']" ;
+         tmc:Code "Nr.2" ;
+         tmc:Criteria "['Is there an action which requires deniability of an individual?', 'Do the actions that require deniability have side-effects (e.g., trigger transmissions, logging, etc.)?']" ;
+         tmc:Examples "Action logging: Actions can be logged as evidence." ,
+                      "Browser history: The browser history of an individual may be used to support claims about their online activities." ,
+                      "Read notifications: Read notifications provide evidence about the user having opened/read the message." ;
+         tmc:Impact "['Action side-effect impacting deniability: Some actions may trigger side-effects that impact deniability claims regarding those actions.']" ;
+         tmc:id "Nr.2" ;
+         rdfs:comment "Action side-effects can cause an action to be attributable to an individual." ;
+         rdfs:label "Nr.2" .
+
+
+tmc:U.1 tmc:Additional_Info "Unaware of data usage: Data subjects are not aware that their personal data is used for different purposes than originally indicated." ;
+        tmc:Code "U.1" ;
+        tmc:Criteria "Are data subjects insufficiently aware of what personal data is being processed, for what purposes, and in what manner?" ;
+        tmc:Examples "Marketing purpose: The data subject is unaware the data may also be used for marketing purposes." ,
+                     "Notice unclear: The notice provided to the data subject was not written in clear and plain language." ,
+                     "Purpose/retention: The data subject was not informed why or for how long their personal data is processed." ,
+                     "Third parties: Data subjects are not aware of the identities of the third parties with whom their data will be shared." ,
+                     "Unaware of indirect collection for extensive profiling: The data subject is unaware that their personal data is collected from third parties to construct more detailed user profiles for targeted advertising (e.g., Facebook)." ,
+                     "Unawareness about collection of news consumption data: Data subjects are unaware that their newspaper uses usage data for targeted advertising purposes." ,
+                     "Unawareness of data collected by traffic cams: The data subject is unaware of traffic cameras collecting not only number plates but also faces." ;
+        tmc:Impact "Unaware of data usage: Data subjects are not aware that their personal data is used for different purposes than originally indicated." ;
+        tmc:hasChildren tmc:U.1.2 ;
+        tmc:id "U.1" ;
+        rdfs:comment "Unawareness of processing" ;
+        rdfs:label "U.1" .
+
+
+tmc:U.1.2 tmc:Additional_Info "Unaware of impact on family or friends: Users may not be aware that they are actually sharing other people�s personal data as well." ;
+          tmc:Code "U.1.2" ;
+          tmc:Criteria "If a user shares personal data of others, is it clear what, why, and how that data is further processed?" ;
+          tmc:Examples "Address book sharing: A service invites a user to share their address book to find contacts on a service." ,
+                       "DNA testing service: Using a DNA testing service can entail sharing medical information on family members." ,
+                       "Social media picture: A user posting a picture including others on social media." ;
+          tmc:Impact "Unaware of impact on family or friends: Users may not be aware that they are actually sharing other people�s personal data as well." ;
+          tmc:id "U.1.2" ;
+          rdfs:comment "Unawareness as a user sharing personal data" ;
+          rdfs:label "U.1.2" .
+
+
+tmc:U.2 tmc:Code "U.2" ;
+        tmc:hasChildren tmc:U.2.1 ,
+                        tmc:U.2.2 ,
+                        tmc:U.2.3 ;
+        tmc:id "U.2" ;
+        rdfs:comment "Lack of data subject control" ;
+        rdfs:label "U.2" .
+
+
+tmc:U.2.1 tmc:Additional_Info "Violation of data subject rights: Appropriate control mechanisms are required to record data subject preferences and keep track of how the data may be further processed." ;
+          tmc:Code "U.2.1" ;
+          tmc:Criteria "Does the system enable the data subject to configure what personal data is processed and for what purposes? Can the data subject alter their preferences afterwards?" ;
+          tmc:Examples "Consent: The data subject is unable to set their consent preferences for the processing of personal data." ,
+                       "Sharing preferences: The data subject is unable to set appropriate preferences on which data is shared and why." ;
+          tmc:Impact "Violation of data subject rights: Appropriate control mechanisms are required to record data subject preferences and keep track of how the data may be further processed." ;
+          tmc:id "U.2.1" ;
+          rdfs:comment "Preferences" ;
+          rdfs:label "U.2.1" .
+
+
+tmc:U.2.2 tmc:Additional_Info "Violation of data subject rights: Lack of access may violate data subjects� legal rights." ;
+          tmc:Code "U.2.2" ;
+          tmc:Criteria "Do data subjects lack access to their personal data being collected, processed, stored, or disclosed?" ;
+          tmc:Examples "Access processed data: The data subject is unable to access their personal data that is held and processed by the service." ,
+                       "No access mechanism: It is impossible for a data subject to request access (neither directly through the system, nor indirectly through a helpdesk)." ,
+                       "Wearable sensor data: A wearable�s sensor data is sent to a lifestyle tracking app, but the user is unable to access statistics and information deduced from their data." ;
+          tmc:Impact "Violation of data subject rights: Lack of access may violate data subjects� legal rights." ;
+          tmc:id "U.2.2" ;
+          rdfs:comment "Access" ;
+          rdfs:label "U.2.2" .
+
+
+tmc:U.2.3 tmc:Additional_Info "Violation of data subject rights: Data subjects have the right to rectify incorrect personal data or request the removal of data that is no longer relevant or needed." ;
+          tmc:Code "U.2.3" ;
+          tmc:Criteria "Do data subjects have the ability to correct or delete personal data?" ;
+          tmc:Examples "Account not deleted: After a data subject deletes their social media account, the account is disabled but the actual data is not deleted." ,
+                       "Address change: A data subject is not able to update their home address after a move." ,
+                       "Correct wrong data: The data subject is unable to modify incorrect personal data." ;
+          tmc:Impact "Violation of data subject rights: Data subjects have the right to rectify incorrect personal data or request the removal of data that is no longer relevant or needed." ;
+          tmc:id "U.2.3" ;
+          rdfs:comment "Rectification/erasure" ;
+          rdfs:label "U.2.3" .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

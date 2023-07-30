@@ -1,0 +1,52 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tmc: <http://www.example.org/tmc#> .
+
+tmc:D a tmc:ThreatCategories,
+        rdfs:Class ;
+    rdfs:label "Detectability" ;
+    tmc:id "D" ;
+    rdfs:comment "Detectability: The possibility of sensitive activities or data being noticed or discovered in a system, leading to privacy concerns." ;
+    rdfs:subClassOf tmc:ThreatTrees .
+
+tmc:DD a tmc:ThreatCategories,
+        rdfs:Class ;
+    rdfs:label "Disclosure of information" ;
+    tmc:id "DD" ;
+    rdfs:comment "Disclosure of information: Unintentional or unauthorized access, use, disclosure, alteration, or destruction of information, often leading to breaches of privacy." ;
+    rdfs:subClassOf tmc:ThreatTrees .
+
+tmc:I a tmc:ThreatCategories,
+        rdfs:Class ;
+    rdfs:label "Identifiability" ;
+    tmc:id "I" ;
+    rdfs:comment "Identifiability: The ability to uniquely identify a specific individual, typically by aggregating data from different sources, potentially revealing sensitive information about that individual." ;
+    rdfs:subClassOf tmc:ThreatTrees .
+
+tmc:L a tmc:ThreatCategories,
+        rdfs:Class ;
+    rdfs:label "Linkability" ;
+    tmc:id "L" ;
+    rdfs:comment "Linkability: The possibility to link the occurrence of different events in a system, which can lead to inferences about user activities or identities." ;
+    rdfs:subClassOf tmc:ThreatTrees .
+
+tmc:Nc a tmc:ThreatCategories,
+        rdfs:Class ;
+    rdfs:label "Non-compliance" ;
+    tmc:id "Nc" ;
+    rdfs:comment "Non-compliance: The system does not comply with legal, regulatory, or policy requirements for data privacy and protection." ;
+    rdfs:subClassOf tmc:ThreatTrees .
+
+tmc:Nr a tmc:ThreatCategories,
+        rdfs:Class ;
+    rdfs:label "Non-repudiation" ;
+    tmc:id "Nr" ;
+    rdfs:comment "Non-repudiation: The inability for a subject (either a data sender or receiver) to deny having performed a particular action, which could lead to accountability issues." ;
+    rdfs:subClassOf tmc:ThreatTrees .
+
+tmc:U a tmc:ThreatCategories,
+        rdfs:Class ;
+    rdfs:label "Unawareness" ;
+    tmc:id "U" ;
+    rdfs:comment "Unawareness: Users may be unaware of data collection, processing, or sharing practices, violating their privacy rights or expectations." ;
+    rdfs:subClassOf tmc:ThreatTrees .
+
